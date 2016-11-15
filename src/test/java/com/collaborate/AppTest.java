@@ -1,4 +1,4 @@
-package com.howtodoinjava.demo;
+package com.collaborate;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

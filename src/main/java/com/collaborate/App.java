@@ -1,15 +1,17 @@
-package com.howtodoinjava.demo;
+package com.collaborate;
+
 
 import com.howtodoinjava.demo.database.MongoDBDemo;
+
+import com.collaborate.controller.EmployeeRESTController;
 import io.dropwizard.Application;
 import io.dropwizard.Configuration;
+import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import io.dropwizard.views.ViewBundle;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import com.howtodoinjava.demo.controller.EmployeeRESTController;
 
 /**
  * Hello world!
@@ -24,7 +26,7 @@ public class App extends Application<Configuration>
 
     @Override
     public void initialize(Bootstrap<Configuration> bootstrap) {
-
+        bootstrap.addBundle(new AssetsBundle());
         bootstrap.addBundle(new ViewBundle());
     }
 
@@ -38,6 +40,7 @@ public class App extends Application<Configuration>
         System.out.print("Database record inserted successfully");
 
         mongoDBDemo.getAllTestEntity();
+
     }
 
     public static void main( String[] args ) throws Exception

@@ -1,4 +1,4 @@
-package com.howtodoinjava.demo.controller;
+package com.collaborate.controller;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -18,15 +18,15 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-import com.howtodoinjava.demo.rest.dao.EmployeeDB;
-import com.howtodoinjava.demo.rest.representations.Employee;
-import com.howtodoinjava.demo.views.EmployeeView;
+import com.collaborate.rest.representations.Employee;
+import com.collaborate.views.EmployeeView;
+import com.collaborate.rest.dao.EmployeeDB;
 
 /**
  * Created by vgarg on 11/10/16.
  */
 
-@Path("/employees")
+@Path("/collaborate")
 @Produces(MediaType.APPLICATION_JSON)
 public class EmployeeRESTController {
     private final Validator validator;
@@ -39,7 +39,7 @@ public class EmployeeRESTController {
     @Produces("text/html")
     public EmployeeView getEmployees() {
         //return Response.ok(EmployeeDB.getEmployees()).build();
-        return new EmployeeView();
+        return new EmployeeView(EmployeeDB.getEmployee(2).getFirstName()+" "+EmployeeDB.getEmployee(1).getLastName());
     }
 
     @GET

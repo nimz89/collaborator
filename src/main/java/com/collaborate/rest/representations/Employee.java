@@ -1,4 +1,4 @@
-package com.howtodoinjava.demo.rest.representations;
+package com.collaborate.rest.representations;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;

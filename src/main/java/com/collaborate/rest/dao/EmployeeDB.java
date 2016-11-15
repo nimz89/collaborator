@@ -1,10 +1,10 @@
-package com.howtodoinjava.demo.rest.dao;
+package com.collaborate.rest.dao;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import com.howtodoinjava.demo.rest.representations.Employee;
+import com.collaborate.rest.representations.Employee;
 
 /**
  * Created by vgarg on 11/10/16.
