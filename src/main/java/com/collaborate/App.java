@@ -22,8 +22,6 @@ public class App extends Application<Configuration>
     @Override
     public void initialize(Bootstrap<Configuration> bootstrap) {
         bootstrap.addBundle(new AssetsBundle());
-        bootstrap.addBundle(new AssetsBundle("/assets/scripts/"));
-        bootstrap.addBundle(new AssetsBundle("/assets/styles/"));
         bootstrap.addBundle(new ViewBundle());
     }
 

@@ -10,54 +10,55 @@
     </button>
 </div>
 
+<div id="addDeleteCard">
+    <button type="button" id="delButton" value="Del" onclick="" class="add-delete-button">-</button>
+    <button type="button" id="addButton" value="Add" onclick="addCard()" class="add-delete-button">+</button>
+</div>
+
 <div id="gridListView" class="grid-list-div">
     <button type="button" id="listButton" value="List" onclick="gridListToggle(this)" class="grid-list-button">List</button>
     <button type="button" id="gridButton" value="Grid" onclick="gridListToggle(this)" class="grid-list-button active">Grid</button>
 </div>
 
-<section style="border: solid;border-width: 1px;">
+<div style="border: solid;border-width: 1px;height: auto;">
     <button class="prev" onclick="prev()">Previous</button>
     <button class="next" onclick="next()">Next</button>
 
 
-    <ul id="gridListContainer" class="container">
-        <li id="first" class="widget grid active"  onclick="ajaxCall()">
-            <div class="widget-header" style="">
-                <h5 class="widget-header-title">
-                    Test Task Header
-                </h5>
-            </div>
-            <div class="widget-description">
-                Test Description
-            </div>
-            <div class="widget-bottom-div">
-               Applied Count:
-               <span class="circled-span">
-                   10
-               </span>
-            </div>
-        </li>
+    <div id="gridListContainer" class="container">
+      <@collaborateTaskWidget taskHeader="Test Header" taskDesc="Test Description" appliedCount="10" isActive=true gridOrListWidget="grid" index="1"/>
+      <@collaborateTaskWidget taskHeader="Test Header" taskDesc="Test Description" appliedCount="10" isActive=true gridOrListWidget="grid" index="2"/>
+    </div>
 
-        <li id="second" class="widget grid active">
-            <div class="widget-header">
-                <h5 class="widget-header-title">
-                    Test Second Task Header
-                </h5>
-            </div>
-            <div>
-                Test Description
-            </div>
-        </li>
-    </ul>
-</section>
 
-<@collaborateCard />
+    <@collaborateCard />
+
+</div>
 </body>
+
+<#macro collaborateTaskWidget taskHeader taskDesc appliedCount isActive gridOrListWidget index>
+    <div id="first${index}" class="widget ${gridOrListWidget} <#if isActive>active</#if>"  onclick="ajaxCall()">
+        <div class="widget-header" style="">
+            <h5 class="widget-header-title">
+                ${taskHeader}
+            </h5>
+        </div>
+        <div class="widget-description">
+            ${taskDesc}
+        </div>
+        <div class="widget-bottom-div">
+            Applied Count:
+                   <span class="circled-span">
+                       ${appliedCount}
+                   </span>
+        </div>
+    </div>
+</#macro>
 
 
 <#macro collaborateCard>
-    <div id="overlayDiv" class="ui-widget-overlay ui-front"></div>
-    <div id="collaborateCard" class="ui-widget ui-front ui-widget-content ui-corner-all ui-widget-shadow">
+    <div id="overlayDiv" class="ui-widget-overlay ui-front hidden"></div>
+    <div id="collaborateCard" class="ui-widget ui-front ui-widget-content ui-corner-all ui-widget-shadow collaborate-card hidden">
         <div id="header">
 
         </div>
