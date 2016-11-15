@@ -1,5 +1,6 @@
 package com.howtodoinjava.demo;
 
+import com.howtodoinjava.demo.database.MongoDBDemo;
 import io.dropwizard.Application;
 import io.dropwizard.Configuration;
 import io.dropwizard.setup.Bootstrap;
@@ -18,9 +19,12 @@ public class App extends Application<Configuration>
 {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(App.class);
+    //private static final String COLLABORATOR_CONFIG_PATH = "collaborator-config.yml";
+
 
     @Override
     public void initialize(Bootstrap<Configuration> bootstrap) {
+
         bootstrap.addBundle(new ViewBundle());
     }
 
@@ -28,11 +32,17 @@ public class App extends Application<Configuration>
     public void run(Configuration c, Environment e) throws Exception {
         LOGGER.info("Registering REST resources");
         e.jersey().register(new EmployeeRESTController(e.getValidator()));
+
+        MongoDBDemo mongoDBDemo = new MongoDBDemo();
+        mongoDBDemo.mongoDemo();
+        System.out.print("Database record inserted successfully");
+
+        mongoDBDemo.getAllTestEntity();
     }
 
     public static void main( String[] args ) throws Exception
     {
         System.out.println( "Hello World!" );
-        new App().run(args);
+        new App().run("server");
     }
 }
