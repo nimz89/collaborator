@@ -1,5 +1,11 @@
-/src/git/Hackathon2016/src/main/java/com/howtodoinjava/demo/controller/EmployeeRESTController.java
-/src/git/Hackathon2016/src/main/java/com/howtodoinjava/demo/views/EmployeeView.java
-/src/git/Hackathon2016/src/main/java/com/howtodoinjava/demo/App.java
-/src/git/Hackathon2016/src/main/java/com/howtodoinjava/demo/rest/representations/Employee.java
-/src/git/Hackathon2016/src/main/java/com/howtodoinjava/demo/rest/dao/EmployeeDB.java
+C:\Users\govindarajanr\Downloads\Collaborate\DropWizardExample\src\main\java\com\collaborate\controller\CollaborateController.java
+C:\Users\govindarajanr\Downloads\Collaborate\DropWizardExample\src\main\java\com\collaborate\views\CollaborateMainView.java
+C:\Users\govindarajanr\Downloads\Collaborate\DropWizardExample\src\main\java\com\collaborate\views\EmployeeView.java
+C:\Users\govindarajanr\Downloads\Collaborate\DropWizardExample\src\main\java\com\collaborate\rest\representations\Employee.java
+C:\Users\govindarajanr\Downloads\Collaborate\DropWizardExample\src\main\java\com\collaborate\rest\dao\EmployeeDB.java
+C:\Users\govindarajanr\Downloads\Collaborate\DropWizardExample\src\main\java\com\collaborate\ui\models\CollaborateTaskWidget.java
+C:\Users\govindarajanr\Downloads\Collaborate\DropWizardExample\src\main\java\com\collaborate\views\CollaborateWidgetView.java
+C:\Users\govindarajanr\Downloads\Collaborate\DropWizardExample\src\main\java\com\collaborate\App.java
+C:\Users\govindarajanr\Downloads\Collaborate\DropWizardExample\src\main\java\com\collaborate\ui\models\CollaborateCard.java
+C:\Users\govindarajanr\Downloads\Collaborate\DropWizardExample\src\main\java\com\collaborate\validator\CollaborateValidator.java
+C:\Users\govindarajanr\Downloads\Collaborate\DropWizardExample\src\main\java\com\collaborate\controller\EmployeeRESTController.java
